@@ -23,14 +23,11 @@ var foodArray = ['cheese', 'bread', 'beef', 'egg', 'pork', 'rice', 'ribs', 'past
 
 var getArrItems = function (array, n) {
     
-    if(array == null)                                                               //check if a valid array have been entered;
+    if(array == null && n==null)                                                    //check if a valid array and a valid number have been entered;
     return "Your input should be ('array','number'), please try again.";            //if not will return "Your input should be ('array','number'), please try again.";
-
-    if(n == null)                                                                   //check to see if a valid number have been entered;
-    return "Your input should be ('array','number'), please try again.";
-
-    if(n < 0)                                                                       //check if the number that entered is greater than 0;
-    return "Your input should be ('array','number'), please try again.";
+    
+    if(n < 0)                                                                       
+    return "Your input should be ('array','number'), please try again.";            //check if the number that entered is greater than 0;
 
     if(n > array.length)                                                            //check if the number that entered is greater than the array length;
     return "We only have " + array.length + " items. Please try again.";
